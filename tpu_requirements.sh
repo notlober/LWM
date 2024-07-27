@@ -13,6 +13,7 @@ pip install --upgrade pip
 
 # Python dependencies
 cat > $HOME/tpu_requirements.txt <<- EndOfFile
+-f https://storage.googleapis.com/jax-releases/libtpu_releases.html
 jax[tpu]==0.4.29
 flax==0.8.4
 optax==0.2.2
