@@ -11,10 +11,10 @@ sudo apt-get update && sudo apt-get install -y \
 # Update pip
 pip install --upgrade pip
 
+pip install -U "jax[tpu]==0.4.29" -f https://storage.googleapis.com/jax-releases/libtpu_releases.html
+
 # Python dependencies
 cat > $HOME/tpu_requirements.txt <<- EndOfFile
--f https://storage.googleapis.com/jax-releases/libtpu_releases.html
-"jax[tpu]==0.4.29"
 flax==0.8.4
 optax==0.2.2
 --extra-index-url https://download.pytorch.org/whl/cpu
